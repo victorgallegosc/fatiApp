@@ -19,14 +19,15 @@ import { delay } from 'rxjs';
 export class SaludosComponent implements OnInit {
   mensajes: string[] = [
     'Buenos días, mi niña.',
-    'Solo quería recordarte',
-    'que eres alguien especial para mí,',
+    'Solo quería recordarte que',
+    'tu eres especial para mí,',
     'y desearte que este día',
-    'sea mil veces mejor que ayer.',
+    'sea mucho mejor que ayer.',
     'Que cada momento del día',
     'te deje un aprendizaje',
     'y que sea un día perfecto.',
-    'Te quiero mucho.'
+    'Te quiero mucho.',
+    '- Victor'
   ];
 
   mensajeActual: string = '';
