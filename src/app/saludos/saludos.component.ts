@@ -20,7 +20,7 @@ export class SaludosComponent implements OnInit {
   mensajes: string[] = [
     'Buenos días, mi niña.',
     'Solo quería recordarte que',
-    'tu eres especial para mí,',
+    'tú eres especial para mí,',
     'y desearte que este día',
     'sea mucho mejor que ayer.',
     'Que cada momento del día',
