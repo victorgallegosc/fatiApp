@@ -1,14 +1,23 @@
 <div class="container">
-    <div class="input-name">
-        <h3>Write your name here:</h3>
-        <input matInput type="text" [(ngModel)]="this.name" />
-    </div>
-    
-    <div class="centered-div">
-        <h1>Hi, {{ this.name }}! </h1>
-        <button mat-flat-button 
-            color="primary">
-            Empezar 
-        </button>
-    </div>
+    <form #form="ngForm" class="centered-div" ngNativeValidate>
+        <div class="input-name">
+            <h3>Write your name here:</h3>
+            <input matInput type="text" name="name" 
+            [(ngModel)]="this.name" required #nameField="ngModel" [readonly]="isNameInputReadonly">
+            <div [hidden]="nameField.valid || nameField.untouched" class="alert alert-danger">
+                You need to enter a name.
+            </div>
+        </div>
+        
+        <div class="centered-div">
+            <h1>Hello, {{ this.name }}!</h1>
+            <button mat-flat-button routerLink="/chooseIdea" (click)="toggleMessageToScroll(); setReadonly()"  [disabled]="!nameField.valid" 
+                color="primary">
+                Start 
+            </button>
+            <h4 style="margin-bottom: 250px;" *ngIf="showMessageToScroll && nameField.valid">Perfecto, desliza hacia abajo.</h4>
+        </div>
+    </form>
+    <router-outlet></router-outlet>
 </div>
+

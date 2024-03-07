@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class InitComponent implements OnInit {
 
   name: string = '';
+  showMessageToScroll: boolean = false;
+  isNameInputReadonly: boolean = false;
 
   constructor() { }
 
@@ -15,8 +17,13 @@ export class InitComponent implements OnInit {
     
   }
 
-  changeName() {
-
+  toggleMessageToScroll(): void {
+    if (this.name.length) {
+      this.showMessageToScroll = !this.showMessageToScroll;
+    }
   }
 
+  setReadonly(): void {
+    this.isNameInputReadonly = true;
+  }
 }

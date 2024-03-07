@@ -21,4 +21,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.ng-invalid:not(form).ng-touched {
+    border: 1px solid red;
 }
