@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { SaludosComponent } from './saludos/saludos.component';
@@ -18,7 +19,8 @@ import { ChooseIdeaComponent } from './choose-idea/choose-idea.component';
   declarations: [
     AppComponent,
     SaludosComponent,
-    InitComponent
+    InitComponent,
+    ChooseIdeaComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { ChooseIdeaComponent } from './choose-idea/choose-idea.component';
     MatButtonModule,
     MatSlideToggleModule,
     MatInputModule,
+    MatMenuModule,
     FormsModule,
   ],
   exports: [ 
