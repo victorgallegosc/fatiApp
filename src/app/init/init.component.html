@@ -1,9 +1,14 @@
-<h3>Flat Buttons</h3>
-<div class="example-button-row">
-  <button mat-flat-button>Basic</button>
-  <button mat-flat-button color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button disabled>Disabled</button>
-  <a mat-flat-button routerLink=".">Link</a>
+<div class="container">
+    <div class="input-name">
+        <h3>Write your name here:</h3>
+        <input matInput type="text" [(ngModel)]="this.name" />
+    </div>
+    
+    <div class="centered-div">
+        <h1>Hi, {{ this.name }}! </h1>
+        <button mat-flat-button 
+            color="primary">
+            Empezar 
+        </button>
+    </div>
 </div>
